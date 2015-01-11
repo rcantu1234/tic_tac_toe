@@ -24,7 +24,7 @@ class Game
 
 			@table.table
 
-				while counter < 10 do
+				while counter < 9 do
 					puts
 					print "Player #{@player1} choose a number: "
 					player = gets.chomp
@@ -54,7 +54,13 @@ class Game
 
 					@table.table
 
+					puts
+
 					counter += 1
+
+					if counter == 9
+						abort "It's a draw!!!"
+					end
 
 					check_win(@player1, @player2) 
 					
@@ -95,8 +101,8 @@ class Game
 				end
 
 			elsif user_choice.downcase == 'n'
-				abort("Thank you!!!")
-			 end
+				abort("Maybe we'll play next time!!!")
+			end
 	end
 
 	def check_win(player1, player2)
