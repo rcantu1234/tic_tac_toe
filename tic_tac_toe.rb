@@ -66,8 +66,13 @@ class Game
 					
 					puts
 
-					print "Player #{@player2} choose a number: "
-					player = gets.chomp
+					# print "Player #{@player2} choose a number: "
+					# player = gets.chomp
+
+					player = rand(1..9)
+
+					print "The computer is entering a number."
+					print "The number is: #{player}"
 
 					puts
 
@@ -115,7 +120,7 @@ class Game
 				abort("Game Over")
 			elsif @table.square[3] == @table.square[4] && @table.square[4] == @table.square[5]
 				if @table.square[3] == 'X'
-					puts "Player {player1} wins!"
+					puts "Player #{player1} wins!"
 				else
 					puts "Player #{player2} wins!"
 				end
@@ -187,11 +192,11 @@ end
 
 # require 'rspec'
 # describe 'game' do
-# 	it 'should have a player' do
+# 	it 'Player 1 should exist' do
 # 		expect(Game.new.player1).to eq 1
 # 	end
-# 	it 'should do this thign' do
-# 		expect(1 + 1).to eq 2
+# 	it 'Player 2 should exist' do
+# 		expect(Game.new.player2).to eq 2
 # 	end
 # end
 
