@@ -66,13 +66,13 @@ class Game
 					
 					puts
 
-					# print "Player #{@player2} choose a number: "
-					# player = gets.chomp
+					print "Player #{@player2} choose a number: "
+					player = gets.chomp
 
-					player = rand(1..9)
+					# player = rand(1..9)
 
-					print "The computer is entering a number."
-					print "The number is: #{player}"
+					# print "The computer is entering a number."
+					# print "The number is: #{player}"
 
 					puts
 
