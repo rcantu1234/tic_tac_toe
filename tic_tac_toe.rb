@@ -5,7 +5,7 @@ class Game
 	def initialize
 		@player1 = 1
 		@player2 = 2
-		@table = CreateTable.new
+		@table = Board.new
 	end
 
 	def play_game
@@ -117,61 +117,69 @@ class Game
 				else
 					puts "Player #{player2} wins!"
 				end
-				abort("Game Over")
+				puts "Game Over"
+				exit
 			elsif @table.square[3] == @table.square[4] && @table.square[4] == @table.square[5]
 				if @table.square[3] == 'X'
 					puts "Player #{player1} wins!"
 				else
 					puts "Player #{player2} wins!"
 				end
-				abort("Game Over")
+				puts "Game Over"
+				exit
 			elsif @table.square[6] == @table.square[7] && @table.square[7] == @table.square[8]
 				if @table.square[6] == 'X'
 					puts "Player #{player1} wins!"
 				else
 					puts "Player #{player2} wins!"
 				end		
-				abort("Game Over")
+				puts "Game Over"
+				exit
 			elsif @table.square[0] == @table.square[3] && @table.square[3] == @table.square[6]
 				if @table.square[0] == 'X'
 					puts "Player #{player1} wins!"
 				else
 					puts "Player #{player2} wins!"
 				end		
-				abort("Game Over")
+				puts "Game Over"
+				exit
 			elsif @table.square[1] == @table.square[4] && @table.square[4] == @table.square[7]
 				if @table.square[1] == 'X'
 					puts "Player #{player1} wins!"
 				else
 					puts "Player #{player2} wins!"
 				end		
-				abort("Game Over")	
+				puts "Game Over"
+				exit	
 			elsif @table.square[2] == @table.square[5] && @table.square[5] == @table.square[8]
 				if @table.square[2] == 'X'
 					puts "Player #{player1} wins!"
 				else
 					puts "Player #{player2} wins!"
 				end		
-				abort("Game Over")
+				puts "Game Over"
+				exit
 			elsif @table.square[0] == @table.square[4] && @table.square[4] == @table.square[8]
 				if @table.square[0] == 'X'
 					puts "Player #{player1} wins!"
 				else
 					puts "#Player {player2} wins!"
 				end		
-				abort("Game Over")
+				puts "Game Over"
+				exit
 			elsif @table.square[2]== @table.square[4] && @table.square[4] == @table.square[6]
 				if @table.square[2] == 'X'
 					puts "Player #{player1} wins!"
 				else
 					puts "Player #{player2} wins!"
 				end		
-				abort("Game Over")
+				puts "Game Over"
+				exit
 			end
 	end
 end
 
-class CreateTable
+class Board
 	attr_accessor :square
 	def initialize
 		@square = [1, 2, 3, 4, 5, 6, 7, 8, 9]
